@@ -20,7 +20,7 @@ const Form = (props) =>{
 
 
     const handleInputChange = (e) =>{
-        //console.log(e.target.value)
+        console.log(e.target.value)
         setDatos({...datos,[e.target.name]: e.target.value
         }) 
     }
@@ -60,7 +60,8 @@ const Form = (props) =>{
                     ></input>
                     
                     <i className="material-icons">filter_1</i>
-                    <input 
+                    <input
+                    min="1"
                     className="form-control"
                     type="number"
                     placeholder="Edad"
@@ -75,7 +76,7 @@ const Form = (props) =>{
                     <input 
                     className="form-control"
                     type="date"
-                    placeholder="Fecha de Nacimiento"
+                    placeholder="Fecha de Registro"
                     name="FechaMascota"
                     onChange={handleInputChange}
                     value={datos.FechaMascota}
@@ -95,14 +96,18 @@ const Form = (props) =>{
                 
                 <i className="material-icons">create</i>
                 
-                    <input 
+                    <select 
                     className="form-control"
                     type="text"
                     placeholder="Genero"
                     name="GeneroMascota"
                     onChange={handleInputChange}
                     value={datos.GeneroMascota}
-                    ></input>
+                    >
+                    <option value="" selected disabled>seleccione</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Hembra">Hembra</option>  
+                    </select>
                     </div>
                     <div className="input-group-text bg-light">
                     <i className="material-icons">note_add</i>

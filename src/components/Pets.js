@@ -77,7 +77,7 @@ const Pets = () =>{
                         
                         </div>
                         <p>Edad: {datosIniciales.EdadMascota}</p>
-                        <p>Fecha de nacimiento: {datosIniciales.FechaMascota}</p>
+                        <p>Fecha de Registro: {datosIniciales.FechaMascota}</p>
                         <p>Especie: {datosIniciales.EspecieMascota}</p>
                         <p>Genero: {datosIniciales.GeneroMascota}</p>
                         <p>Señas particulares: {datosIniciales.SeniasMascota}</p>
